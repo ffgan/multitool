@@ -5,7 +5,7 @@ use std::{
 };
 
 pub const SCHEMA: &str =
-    "https://raw.githubusercontent.com/theoremlp/rules_multitool/main/lockfile.schema.json";
+    "https://raw.githubusercontent.com/ffgan/rules_multitool/rv64/lockfile.schema.json";
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -20,6 +20,7 @@ pub enum SupportedOs {
 pub enum SupportedCpu {
     Arm64,
     X86_64,
+    Riscv64,
 }
 
 #[derive(Clone, Serialize, Deserialize)]
@@ -80,6 +81,7 @@ impl Display for SupportedCpu {
         match &self {
             SupportedCpu::Arm64 => write!(f, "arm64"),
             SupportedCpu::X86_64 => write!(f, "x86_64"),
+            SupportedCpu::Riscv64 => write!(f, "riscv64"),
         }
     }
 }
