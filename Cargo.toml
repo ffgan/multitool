@@ -1,8 +1,8 @@
 [package]
 name = "multitool"
-version = "0.9.0"
+version = "0.10.0"
 edition = "2021"
-repository = "https://github.com/theoremlp/multitool"
+repository = "https://github.com/ffgan/multitool"
 rust-version = "1.80"
 
 [dependencies]
